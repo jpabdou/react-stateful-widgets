@@ -37,8 +37,11 @@ export default function Squares() {
   };
 
   const markActive = id => {
+    if (id === activeSquare) {
+      setActiveSquare(null)
+    } else {
     setActiveSquare(id)
-
+    }
     // This is a helper used inside an _inlined_ click handler (see below).
     // Set the id argument to become the active id in state
     // (unless it already is, in which case we should reset
